@@ -14,10 +14,9 @@ export class AuthService {
 
   private url = 'http://localhost:8014/auth/';
 
-  login(username: string, password: string, rol: string) {
+  login(username: string, password: string) {
     localStorage.setItem('username', username);
     localStorage.setItem('password', password);
-    localStorage.setItem('rol', rol);
   }
 
   registrar(usuario: UsuarioRequest): Observable<any> {
@@ -33,7 +32,6 @@ export class AuthService {
   logout() {
     localStorage.removeItem('username');
     localStorage.removeItem('password');
-    localStorage.removeItem('rol');
   }
 
   isLoggedIn(): boolean {
