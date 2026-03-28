@@ -1,1 +1,56 @@
-<p>guardar-evento works!</p>
+<div class="container py-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-light text-center py-4">
+            <h2 class="fw-bold text-secondary m-0">REGISTRO DE EVENTOS</h2>
+        </div>
+
+        <div class="card-body p-4">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">NOMBRE:</label>
+                    <input type="text" class="form-control form-control-lg shadow-sm"
+                        name="nombre" [(ngModel)]="evento.nombre"
+                        placeholder="Ingresa el nombre del evento">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">LUGAR:</label>
+                    <input type="text" class="form-control form-control-lg shadow-sm"
+                        name="lugar" [(ngModel)]="evento.lugar"
+                        placeholder="Ingresa el lugar del evento">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">FECHA:</label>
+                    <input type="date" class="form-control form-control-lg shadow-sm"
+                        name="fecha" [(ngModel)]="evento.fecha">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">PRECIO:</label>
+                    <input type="number" class="form-control form-control-lg shadow-sm"
+                        name="precio" [(ngModel)]="evento.precio"
+                        placeholder="Ingresa el precio del evento">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">CAPACIDAD:</label>
+                    <input type="number" class="form-control form-control-lg shadow-sm"
+                        name="capacidad" [(ngModel)]="evento.capacidad"
+                        placeholder="Ingresa la capacidad del evento">
+                </div>
+
+                <div class="d-flex justify-content-center gap-3">
+                    <button type="button" class="btn btn-lg btn-outline-success shadow-sm px-4"
+                        (click)="guardar()">
+                        <i class="bi bi-check-circle me-2"></i> GUARDAR
+                    </button>
+                    <button type="button" class="btn btn-lg btn-outline-danger shadow-sm px-4"
+                        (click)="cancelar()">
+                        <i class="bi bi-x-circle me-2"></i> CANCELAR
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

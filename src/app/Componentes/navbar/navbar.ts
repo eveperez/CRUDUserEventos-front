@@ -50,4 +50,12 @@ export class Navbar {
     this.router.navigate(['guardar-evento']);
   }
 
+  getUsername(): string {
+    return localStorage.getItem('username') || '';
+  }
+
+  getRol(): string {
+      return localStorage.getItem('rol') || '';
+  }
+
 }
